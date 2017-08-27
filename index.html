@@ -23,20 +23,22 @@
 				
 				<div ng-controller="SubjectListController">
 					<ul id="subjectList">
-						<li ng-repeat="subjectName in results">
-							<a href="#!/SubjectContent" ng-model="testt" ng-click="getSubject()">{{subjectName}}</a></li>
+						<li ng-repeat="subjectName in subjectListResults">
+							<a href="#!/SubjectContent">{{subjectName}}</a></li>
 						</li>
 					</ul>
 				</div>
 
 			</li>
 			<li>
-				<a id="textbooksLink" href="#!/C">Textbooks</a>
-				<ul id="textbooksList">
-					<li><a href="#">Grade 10</a></li>
-					<li><a href="#">Grade 11</a></li>
-					<li><a href="#">Grade 12</a></li>
-				</ul>
+				<a id="textbooksLink" href="">Textbooks</a>
+				<div ng-controller="GradeListController">
+					<ul id="textbooksList">
+						<li ng-repeat="grade in gradeResults">
+							<a href="#!/textBooksContent">{{grade}}</a></li>
+						</li>
+					</ul>
+				</div>
 			</li>
 			<li><a href="#!/D">D</a></li>
 			<li><a href="#!/E">E</a></li>
@@ -52,9 +54,10 @@
 <script src="script/angular-route.min.js" ></script>
 <script src="script/app.js" ></script>
 <script src="angular_modules/Controllers/DashboardController.js"></script>
-<script src="angular_modules/Controllers/SubjectContentController.js"> </script>
 <script src="angular_modules/Controllers/SubjectListController.js"> </script>
-<script src="angular_modules/Controllers/cController.js"> </script>
+<script src="angular_modules/Controllers/SubjectContentController.js"> </script>
+<script src="angular_modules/Controllers/GradeListController.js"> </script>
+<script src="angular_modules/Controllers/BooksContentController.js"> </script>
 <script src="angular_modules/Controllers/dController.js"> </script>
 <script src="angular_modules/Controllers/eController.js"> </script>
 <script type="text/javascript">
