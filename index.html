@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>SchoolSystem</title>
+<link href="style/global.css" rel="stylesheet" type="text/css" />
+<meta name="viewpprt" content="width=device-width, initial-scale= 1.0, user-scalable=0" />
+</head>
+<body ng-app="SchoolSystem">
+<div id="header">
+	<div class="header">
+		<div class="logo">
+		 	<a href="#">School<span>System</span></a>
+		</div>
+	</div>
+</div>
+
+<a href="#" class="mobile">MENU</a>
+<div id="container">
+	<div class="sidebar">
+		<ul id="nav">
+			<li><a class="selected" href="#!/">Dashboard</a></li>
+			<li>
+				<a id="subjectsLink" href="">Subjects</a>
+				
+				<div ng-controller="SubjectListController">
+					<ul id="subjectList">
+						<li ng-repeat="subjectName in results">
+							<a href="#!/SubjectContent" ng-model="testt" ng-click="getSubject()">{{subjectName}}</a></li>
+						</li>
+					</ul>
+				</div>
+
+			</li>
+			<li>
+				<a id="textbooksLink" href="#!/C">Textbooks</a>
+				<ul id="textbooksList">
+					<li><a href="#">Grade 10</a></li>
+					<li><a href="#">Grade 11</a></li>
+					<li><a href="#">Grade 12</a></li>
+				</ul>
+			</li>
+			<li><a href="#!/D">D</a></li>
+			<li><a href="#!/E">E</a></li>
+		</ul>
+	</div>
+	<div class="content">
+		<div ng-view></div>
+	</div>
+</div>
+
+<script src="script/jquery-3.2.1.min.js" ></script>
+<script src="script/angular.min.js" ></script>
+<script src="script/angular-route.min.js" ></script>
+<script src="script/app.js" ></script>
+<script src="angular_modules/Controllers/DashboardController.js"></script>
+<script src="angular_modules/Controllers/SubjectContentController.js"> </script>
+<script src="angular_modules/Controllers/SubjectListController.js"> </script>
+<script src="angular_modules/Controllers/cController.js"> </script>
+<script src="angular_modules/Controllers/dController.js"> </script>
+<script src="angular_modules/Controllers/eController.js"> </script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.mobile').click(function(){
+			$('.sidebar').slideToggle('fast');
+		});
+		$('#subjectsLink').click(function(){
+			$('#subjectList').slideToggle('fast');
+		});
+		$('#textbooksLink').click(function(){
+			$('#textbooksList').slideToggle('fast');
+		});
+
+		window.onresize = function(){
+			if($(window).width() >= 500){
+				$('.sidebar').show();
+			}
+		};
+
+		$('#nav>li>a').click(function(){
+			$('#nav>li>a').removeClass('selected');
+			$(this).addClass('selected');
+		});
+
+	});
+</script>
+</body>
+</html>
