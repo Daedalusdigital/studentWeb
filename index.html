@@ -4,7 +4,7 @@
 <link href="style/global.css" rel="stylesheet" type="text/css" />
 <meta name="viewpprt" content="width=device-width, initial-scale= 1.0, user-scalable=0" />
 </head>
-<body ng-app="SchoolSystem">
+<body>
 <div id="header">
 	<div class="header">
 		<div class="logo">
@@ -17,49 +17,44 @@
 <div id="container">
 	<div class="sidebar">
 		<ul id="nav">
-			<li><a class="selected" href="#!/">Dashboard</a></li>
-			<li>
-				<a id="subjectsLink" href="">Subjects</a>
-				
-				<div ng-controller="SubjectListController">
-					<ul id="subjectList">
-						<li ng-repeat="subjectName in subjectListResults">
-							<a href="#!/SubjectContent">{{subjectName}}</a></li>
-						</li>
-					</ul>
-				</div>
-
-			</li>
-			<li>
-				<a id="textbooksLink" href="">Textbooks</a>
-				<div ng-controller="GradeListController">
-					<ul id="textbooksList">
-						<li ng-repeat="grade in gradeResults">
-							<a href="#!/textBooksContent">{{grade}}</a></li>
-						</li>
-					</ul>
-				</div>
-			</li>
-			<li><a href="#!/D">D</a></li>
-			<li><a href="#!/E">E</a></li>
+			<li><a class="selected" href="#">Dashboard</a></li>
 		</ul>
 	</div>
 	<div class="content">
-		<div ng-view></div>
+		<div class="card">
+			<div class="number">
+				<h1>200</h1>
+				Students
+			</div>
+			<div class="glyphicon">ICON</div>
+		</div>
+		<div class="card" style="background-color:blueviolet">
+			<div class="number">
+				<h1>20</h1>
+				Teachers
+			</div>
+			<div class="glyphicon">ICON</div>
+		</div>
+		<div class="card"  style="background-color:lightcoral">
+			<div class="number">
+				<h1>180</h1>
+				Parents
+			</div>
+			<div class="glyphicon">ICON</div>
+		</div>
+		<div class="card"  style="background-color:sienna">
+			<div class="number">
+				<h1>170</h1>
+				Subjects
+			</div>
+			<div class="glyphicon">ICON</div>
+		</div>
+	
 	</div>
 </div>
 
 <script src="script/jquery-3.2.1.min.js" ></script>
-<script src="script/angular.min.js" ></script>
-<script src="script/angular-route.min.js" ></script>
-<script src="script/app.js" ></script>
-<script src="angular_modules/Controllers/DashboardController.js"></script>
-<script src="angular_modules/Controllers/SubjectListController.js"> </script>
-<script src="angular_modules/Controllers/SubjectContentController.js"> </script>
-<script src="angular_modules/Controllers/GradeListController.js"> </script>
-<script src="angular_modules/Controllers/BooksContentController.js"> </script>
-<script src="angular_modules/Controllers/dController.js"> </script>
-<script src="angular_modules/Controllers/eController.js"> </script>
+
 <script type="text/javascript">
 	$(document).ready(function(){
 		$('.mobile').click(function(){

@@ -142,3 +142,25 @@ div#subjectList{
 		margin-left: 0px;
 	}
 }
+
+.card{
+	width:15em;
+	height:auto;
+	background-color: blue;
+	color:white;
+	padding:16px;
+	border-radius: 10px;
+	float: left;
+	margin: 10px;
+}
+
+.glyphicon{
+	float: right;
+	margin-top: -40px;
+	font-size:25pt;
+}
+
+hr{
+	background-color: aqua;
+	border-bottom: 1xp solid blue;
+}
