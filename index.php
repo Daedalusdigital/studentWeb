@@ -71,22 +71,20 @@ if(@$_POST['submit'] === "Login"){
 
 <div class="space" style="margin-top:100px;"></div>
 <center>
-<h2>Student World</h2>
+<h2><b>Student World</b></h2>
 </center>
 <form action="" method="POST">
          <div class="container">
             <div class="col-md-offset-4 col-md-4">
-               
-            <input type="text" placeholder="Username" name="idnumber" required>
-
-             <input type="password" placeholder="Password" name="password" required>
                 
-            <input type="submit" name="submit" value="Login" />
-            <span class="psw">Forgot <a href="#">password?</a></span>
-          </div>
-           <div class="container" style="background-color:#f1f1f1"> 
+                <input type="text" placeholder="Username" name="idnumber" required>
+
+                <input type="password" placeholder="Password" name="password" required>
+                    
+                <input type="submit" name="submit" value="Login" />
+                <span class="psw">Forgot <a href="#">password?</a></span>
             </div>
-            </div>
+         </div>
 </form>
 
 <?php include('inc/main.footer.php');?>
