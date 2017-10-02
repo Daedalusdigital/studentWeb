@@ -47,6 +47,7 @@ div#container{
 	margin-left: 250px;
 	height: 100%;
 	padding: 15px;
+	background-color: #B1ABAB;
 }
 
 ul#nav{
@@ -143,7 +144,7 @@ div#subjectList{
 }
 
 .card{
-	width:20em;
+	width:17.5em;
 	height:auto;
 	background-color: blue;
 	color:white;
@@ -151,6 +152,11 @@ div#subjectList{
 	border-radius: 10px;
 	float: left;
 	margin: 10px;
+}
+
+.card:hover{
+	cursor: pointer;
+	box-shadow:5px 15px 15px rgba(0, 0, 0, 0.83)
 }
 
 .glyphicon{
@@ -315,4 +321,8 @@ span.psw {
     .cancelbtn {
        width: 100%;
     }
+}
+
+a:hover{
+	text-decoration: none;
 }

@@ -36,9 +36,9 @@ session_start();?>
         <?php if(@$_SESSION['user_role'] == "Administrator"){
             
             echo '
-                    <li><a class="selected" href="#">Dashboard</a></li>
-                    <li><a  href="#">Teachers</a></li>
-                    <li><a  href="#">Students</a></li>
+                    <li><a class="selected" href="adminDashboard.php">Dashboard</a></li>
+                    <li><a  href="teachersList.php">Teachers</a></li>
+                    <li><a  href="studentsList.php">Students</a></li>
                     <li><a  href="#">Subjects</a></li>
                  ';
             
@@ -46,7 +46,7 @@ session_start();?>
         else if(@$_SESSION['user_role'] == "Teacher"){
            
             echo '
-            <li><a class="selected" href="#">Students</a></li>
+            <li><a class="selected" href="adminDashboard.php">Students</a></li>
 			<li><a  href="#">Subjects</a></li>
                 ';
         }
@@ -59,8 +59,6 @@ session_start();?>
                 ';
         }
         
-        ?>
-			
-			
+        ?>	
 		</ul>
 	</div>
