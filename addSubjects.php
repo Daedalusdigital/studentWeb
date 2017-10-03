@@ -1,8 +1,5 @@
+<?php include('inc/main.header.php');?>
 <?php
-include("connection.php");
-
-
-//USER REGISTRATION
 
 if(@$_POST['submit'] === "Add Subject"){
     
@@ -43,7 +40,8 @@ if(@$_POST['submit'] === "Add Subject"){
 }
 
 echo '
-    <form method="POST" action="">
+<div class="content">
+    <form method="POST" action="" style="border:none;">
         <table>
         <tr><th colspan="2"> Add Subject</th></tr>
         <tr>       <td>Code :</td>         <td><input type="text" name="code" placeholder="Subject code" value="'.@$code.'"/></td></tr>
@@ -58,6 +56,7 @@ echo '
        <tr>       <td colspan="2"><input type="submit" name="submit" value="Add Subject" /></td></tr>
         </table>
     </form>
+    </div>
 ';
 
 ?>

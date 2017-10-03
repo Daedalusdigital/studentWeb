@@ -67,6 +67,7 @@ echo '
                                                     <option style="color:grey;" value="<--select role -->"><--select role --></option>
                                                     <option value="Student">Student</option>
                                                     <option value="Teacher">Teacher</option>
+                                                    <option value="Parent">Parent</option>
                                                 </select>
                                                                                                                </td></tr>
         <tr>       <td>Password </td>         <td><input type="password" name="password" placeholder="password" /></td></tr>

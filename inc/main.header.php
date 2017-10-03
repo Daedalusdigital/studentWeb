@@ -40,7 +40,8 @@ session_start();?>
                     <li><a class="selected" href="adminDashboard.php">Dashboard</a></li>
                     <li><a  href="teachersList.php">Teachers</a></li>
                     <li><a  href="studentsList.php">Students</a></li>
-                    <li><a  href="#">Subjects</a></li>
+                    <li><a  href="subjectsList.php">Subjects</a></li>
+                    <li><a  href="parentsList.php">Parents</a></li>
                  ';
             
         }
@@ -51,7 +52,7 @@ session_start();?>
 			<li><a  href="#">Subjects</a></li>
                 ';
         }
-        else{
+        else if(@$_SESSION['user_role'] == "Student"){
                       
             echo '
 			<li><a class="selected" href="#">Announcements</a></li>
@@ -59,7 +60,13 @@ session_start();?>
 			<li><a  href="#">View Grades</a></li>
                 ';
         }
+        else{
+            echo '
+			<li><a  href="#">View Grades</a></li>
+                ';
+        }
         
         ?>	
+        <li><a  href="logout.php">logout</a></li>
 		</ul>
 	</div>

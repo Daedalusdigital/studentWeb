@@ -53,9 +53,12 @@ if(@$_POST['submit'] === "Login"){
              else if($userRole == "Teacher"){
                 header("location:teacherHome.php");
              }
+             else if($userRole == "Parent"){
+                header("location:parentHome.php");
+             }
              else{
                 $_SESSION['user_role'] = "Administrator";
-                 header("location:adminDashboard.php");
+                header("location:adminDashboard.php");
              }
         }
     }
