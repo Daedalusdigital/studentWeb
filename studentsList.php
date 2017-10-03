@@ -34,7 +34,7 @@
 							</button>
 							<button class="btn btn-primary"
 							>
-								<i class="fa fa-view"></i>
+								<i class="fa fa-eye"></i>
 							</button>
 						</td>
 					</tr>

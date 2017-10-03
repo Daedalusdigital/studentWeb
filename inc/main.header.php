@@ -4,6 +4,7 @@ session_start();?>
 <head>
 <title>SchoolSystem</title>
 <link href="style/bootstrap.css" rel="stylesheet" type="text/css" />
+<link href="style/font-awesome.min.css" rel="stylesheet" type="text/css" />
 <link href="style/global.css" rel="stylesheet" type="text/css" />
 <meta name="viewpprt" content="width=device-width, initial-scale= 1.0, user-scalable=0" />
 </head>
