@@ -55,13 +55,15 @@ if(@$_POST['submit'] === "Register"){
 }
 
 echo '
-    <form method="POST" action="" style="padding:20px;">
+
+<div class="content">
+    <form method="POST" action="" style="border:none;">
         <table>
-        <tr>       <th colspan="2">Add User</th></tr>
+        <tr>       <th colspan="2"><h3>Add User</h3></th></tr>
         <tr>       <td>identity document number </td>         <td><input type="text" name="idnumber" placeholder="ID Number" value="'.@$idnumber.'"/></td></tr>
         <tr>       <td>First name </td>         <td><input type="text" name="fname" placeholder="first name" value="'.@$firstname.'"/></td></tr>
         <tr>       <td>last name </td>          <td><input type="text" name="lname" placeholder="last name"  value="'.@$lastname.'"/></td></tr>
-        <tr>       <td>role </td>               <td><selectclass="select" name="role" style="width:100%; value="'.@$role.'"">
+        <tr>       <td>role </td>               <td><select class="select" name="role" style="width:100%; value="'.@$role.'"">
                                                     <option style="color:grey;" value="<--select role -->"><--select role --></option>
                                                     <option value="Student">Student</option>
                                                     <option value="Teacher">Teacher</option>
@@ -72,6 +74,7 @@ echo '
         <tr>       <td colspan="2"><input type="submit" name="submit" value="Register" /></td></tr>
         </table>
     </form>
+    </div>
 ';
 
 ?>
