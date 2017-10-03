@@ -67,6 +67,6 @@ session_start();?>
         }
         
         ?>	
-        <li><a  href="logout.php">logout</a></li>
+        <li style="position:fixed;bottom:0;background-color:black;"><a   href="logout.php">logout</a></li>
 		</ul>
 	</div>

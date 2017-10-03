@@ -23,7 +23,7 @@
 						<td>'.$row['firstname'].'</td>
 						<td>'.$row['lastname'].'</td>
 						<td>'.$row['user_number'].'</td>
-						<td>
+						<td style="width:147px;">
 							<button class="btn btn-info"
 							>
 								<i class="fa fa-edit"></i>

@@ -70,6 +70,23 @@ if(@$_POST['submit'] === "Login"){
     echo $idnumber."</br>". $password;
     */
 }
+
+if(@$_POST['submit'] == "Admin"){
+    $useramee = "admin";
+    $passwordd = "admin";
+}
+else if(@$_POST['submit'] == "Student"){
+    $useramee = "student";
+    $passwordd = "student";
+}
+else if(@$_POST['submit'] == "Teacher"){
+    $useramee = "teacher";
+    $passwordd = "teacher";
+}
+else if(@$_POST['submit'] == "Parent"){
+    $useramee = "parent";
+    $passwordd = "parent";
+}
 ?>
 
 <div class="space" style="margin-top:100px;"></div>
@@ -80,9 +97,9 @@ if(@$_POST['submit'] === "Login"){
          <div class="container">
             <div class="col-md-offset-4 col-md-4">
                 
-                <input type="text" placeholder="Username" name="idnumber" required>
+                <input type="text" placeholder="Username" name="idnumber" value="<?php echo @$useramee;?>" required>
 
-                <input type="password" placeholder="Password" name="password" required>
+                <input type="password" placeholder="Password" name="password" value="<?php echo @$passwordd;?>" required>
                     
                 <input type="submit" name="submit" value="Login" />
                 <span class="psw">Forgot <a href="#">password?</a></span>
@@ -90,4 +107,20 @@ if(@$_POST['submit'] === "Login"){
          </div>
 </form>
 
+
+<?php
+
+
+
+?>
+
+<center>
+<form action="" method="POST" style="border:none;">
+    <h4> Login as Guest: </h4>
+    <button class="btn btn-primary" type="submit" name="submit" value="Admin">Admin</button>
+    <button class="btn btn-default" type="submit" name="submit" value="Teacher" >Teacher</button>
+    <button class="btn btn-warning" type="submit" name="submit" value="Student" >Student</button>
+    <button class="btn btn-success" type="submit" name="submit" value="Parent" >Parent</button>
+</form>
+</center>
 <?php include('inc/main.footer.php');?>
