@@ -19,32 +19,35 @@
 					while($row = $results->fetch_assoc()){
 
 						echo'
+						<form action="userView.php" method="POST">
 						<tr>
+						<input class="hidden" type="text" name="user_id" value="'.$row['user_id'].'" />
 						<td>'.$row['firstname'].'</td>
 						<td>'.$row['lastname'].'</td>
 						<td>'.$row['user_number'].'</td>
-						<td>
-							<button class="btn btn-info"
+						<td style="width:147px;">
+							<button type="submit" class="btn btn-info"
 							>
 								<i class="fa fa-edit"></i>
 							</button>
-							<button class="btn btn-danger"
+							<button type="submit" class="btn btn-danger"
 							>
 								<i class="fa fa-minus"></i>
 							</button>
-							<button class="btn btn-primary"
+							<button type="submit" class="btn btn-primary"
 							>
 								<i class="fa fa-eye"></i>
 							</button>
 						</td>
 					</tr>
+					</form>
 							';
 					}
 				?>
 			</tbody>
 		</table>
-		<button class="btn btn-success" 
+		<a href="registerUsers.php"><button class="btn btn-success" 
 		><i class="fa fa-plus"></i></button>
-	
+		</a>
 	</div>
 <?php include('inc/main.footer.php');?>

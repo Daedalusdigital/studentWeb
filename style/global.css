@@ -144,7 +144,7 @@ div#subjectList{
 }
 
 .card{
-	width:17.5em;
+	width:17.3em;
 	height:auto;
 	background-color: blue;
 	color:white;
@@ -262,7 +262,7 @@ form {
     border: 3px solid #f1f1f1;
 }
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password], td.select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
