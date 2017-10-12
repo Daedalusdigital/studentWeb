@@ -3,18 +3,22 @@
 
 if(@$_POST['submit'] === "Add Tasks"){
     
-    $code = @$_POST['code'];      
-    $name = @$_POST['name'];      
+    $taskHeader = @$_POST['task_header'];      
+    $subjectCode = @$_POST['subjectCode'];      
+    $description = @$_POST['description'];      
+    $dueDate = @$_POST['dueDate'];      
     $grade = @$_POST['grade'];
 
     
     if($grade !== "<--select subjectcode -->"){
-            /*
-             echo "Code : ". $code."</br>
-              Name : ". $name."</br>
+            
+             echo "Task Header : ". $taskHeader."</br>
+              Subject Code : ". $subjectCode."</br>
+              Due Date : ". $dueDate."</br>
               Grade : ". $grade."</br>
+              Description : ". $description."</br>
              ";
-            */
+            /*
             
             $sql = "SELECT *
                         FROM subjects 
@@ -32,7 +36,7 @@ if(@$_POST['submit'] === "Add Tasks"){
             }
             
             $code = $name =  " ";
-            $grade = "<--select grade -->";
+            $grade = "<--select grade -->";*/
     }
     else{
          echo "grade not selected.Please select to continue";
@@ -45,7 +49,7 @@ echo '
         <table>
         <tr><th colspan="2"> Add Task</th></tr>
         <tr>       <td>Task Name </td>         <td><input type="text" name="task_header" placeholder="Task Header" value="'.@$taskHeader.'"/></td></tr>
-        <tr>       <td>Description </td>         <td><input type="text" name="name" placeholder="Description" value="'.@$description.'"/></td></tr>
+        <tr>       <td>Description </td>         <td><input type="text" name="description" placeholder="Description" value="'.@$description.'"/></td></tr>
         <tr>       <td>Date Due</td>               <td><input style="width:100%;padding-left:20px;" type="date" name="dueDate"></td></tr>
         <tr>       <td>Grade </td>               <td><select name="grade" style="width:100%;" value="'.@$grade.'"">
                                                             <option value="<--select grade -->"><--select grade --></option>
@@ -69,7 +73,10 @@ echo '
                                                                                              echo '<option value="'.$subject_code.'">'.$subject_name.' '.$subject_grade.'</option>';
                                                                                          }
                                                                                          echo '
-                                                                                     </select>                                               </td></tr>
+
+                                                                                     </select> 
+                                                                                     <input class="hidden" type="text" name="subjectCode" value="'.@$subject_code.'" />
+                                                                                     </td></tr>
         <tr>       <td colspan="2"><input type="submit" name="submit" value="Add Tasks" /></td></tr>
         </table>
     </form>
