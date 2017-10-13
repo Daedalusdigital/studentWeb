@@ -50,7 +50,7 @@ session_start();?>
             echo '
             <li><a class="selected" href="adminDashboard.php">Students</a></li>
             <li><a  href="#">Subjects</a></li>
-            <li><a  href="addTasks.php">Tasks</a></li>
+            <li><a  href="tasksList.php">Tasks</a></li>
                 ';
         }
         else if(@$_SESSION['user_role'] == "Student"){

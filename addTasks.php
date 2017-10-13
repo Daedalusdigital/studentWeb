@@ -18,9 +18,6 @@ if(@$_POST['submit'] === "Add Tasks"){
               Description : ". $description."</br>
              ";
             */
-
-
-            
             
             $sql = "SELECT *
                         FROM tasks 
@@ -64,7 +61,7 @@ echo '
                                                             <option value="12">12</option>
                                                         </select>
                                                                                          </td></tr>
-                                                                                         <tr>       <td>Subject </td>            <td><select name="subject" style="width:100%;" value="'.@$subject.'">
+                                                                                         <tr>       <td>Subject </td>            <td><select name="subjectCode" style="width:100%;" value="'.@$subject.'">
                                                                                          <option value="<--select subject -->"><--select subject --></option>
                                                                                          ';
                                                                                          $SelectSubjectsSql = "SELECT *
@@ -81,7 +78,6 @@ echo '
                                                                                          echo '
 
                                                                                      </select> 
-                                                                                     <input class="hidden" type="text" name="subjectCode" value="'.@$subject_code.'" />
                                                                                      </td></tr>
         <tr>       <td colspan="2"><input type="submit" name="submit" value="Add Tasks" /></td></tr>
         </table>
