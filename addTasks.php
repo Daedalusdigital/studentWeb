@@ -8,35 +8,41 @@ if(@$_POST['submit'] === "Add Tasks"){
     $description = @$_POST['description'];      
     $dueDate = @$_POST['dueDate'];      
     $grade = @$_POST['grade'];
-
     
     if($grade !== "<--select subjectcode -->"){
-            
+            /*
              echo "Task Header : ". $taskHeader."</br>
               Subject Code : ". $subjectCode."</br>
               Due Date : ". $dueDate."</br>
               Grade : ". $grade."</br>
               Description : ". $description."</br>
              ";
-            /*
+            */
+
+
+            
             
             $sql = "SELECT *
-                        FROM subjects 
-                            WHERE subject_code = '".$code."' LIMIT 1";
+                        FROM tasks 
+                            WHERE task_name = '".$taskHeader."'
+                            AND subject_code = '".$subjectCode."'
+                            AND description = '".$description."'
+                            AND dueDate = '".$dueDate."'
+                            AND grade = '".$grade."' LIMIT 1";
             
             $results = $conn->query($sql);
             
             if($results->num_rows > 0){
-                echo "subject already exists";
+                echo "task already exists";
             }
             else{
-                $sql ="INSERT INTO subjects VALUES('','$code','$name','$grade')";
+                $sql ="INSERT INTO tasks VALUES('','$taskHeader','$description','$dueDate','$grade','$subjectCode')";
                 $conn->query($sql);
-                echo "subject was successfully added";
+                echo "Tasks was successfully added";
             }
             
             $code = $name =  " ";
-            $grade = "<--select grade -->";*/
+            $grade = "<--select grade -->";
     }
     else{
          echo "grade not selected.Please select to continue";
